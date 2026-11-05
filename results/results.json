@@ -1,0 +1,38 @@
+{
+  "cohort": {"query_identities": 115, "scoreable": 113, "excluded": ["p0_q15", "p3_q09"]},
+  "fusion_sweep_113": {
+    "metric": "distinct-video recall (count of 113) and MRR@20",
+    "arms": {
+      "current_nested_max": {"r1": 49, "r5": 77, "r10": 82, "r20": 87, "mrr20": 0.529989},
+      "rrf_k60":            {"r1": 36, "r5": 68, "r10": 76, "r20": 85, "mrr20": 0.433591},
+      "minmax_sum":         {"r1": 36, "r5": 67, "r10": 79, "r20": 84, "mrr20": 0.429601},
+      "robust_z_sum":       {"r1": 36, "r5": 61, "r10": 69, "r20": 81, "mrr20": 0.411475},
+      "softmax_sum_t1":     {"r1": 16, "r5": 62, "r10": 80, "r20": 86, "mrr20": 0.304353},
+      "qwen_only_matched":  {"r1": 47, "r5": 71, "r10": 79, "r20": 84, "mrr20": 0.507495}
+    },
+    "source": "JimmyK300/Vecna@37b321048432ccba5182a66bd39b1ca73c547537:benchmark-results/astra-retrieval-rd-v1/REPORT.md"
+  },
+  "reranker_audit_113": {
+    "qwen_only": {"r1": 41, "r5": 56, "r10": 65, "r20": 68, "mrr20": 0.424340},
+    "reranker":  {"r1": 40, "r5": 61, "r10": 64, "r20": 76, "mrr20": 0.432021},
+    "r20_rescues": 9, "r20_regressions": ["p2_q14"],
+    "latency_s_per_active_call": {"mean": 28.219, "p50": 28.049, "p95": 30.742},
+    "sources": [
+      "JimmyK300/official-dataset-control (private)@7093153dc384de2295894f8ade7d7185c4a08448:experiments/vecna-reranker-fusion-v1-20260914/README.md",
+      "JimmyK300/Vecna@37b321048432ccba5182a66bd39b1ca73c547537:benchmark-results/astra-retrieval-rd-v1/REPORT.md"
+    ]
+  },
+  "oracle_saved_runs_113": {
+    "saved_run_arm_pairs": 153,
+    "all_comparable_saved_arms": {"video_at20": 108, "video_at100": 111, "complete_evidence_at20": 87, "complete_evidence_at100": 94},
+    "is_upper_bound": true,
+    "source": "official-dataset-control retirement archive (Official-Dataset-2026-09-28-v1, not on GitHub): evaluation/saved-run-oracle-20260923-v1/README.md"
+  },
+  "clause_decomposition_19": {
+    "raw_query":         {"r1": 7, "r5": 10, "r10": 11, "r20": 13, "mrr": 0.421487, "median_rank": 5},
+    "atomic_clause_rrf": {"r1": 4, "r5": 7,  "r10": 8,  "r20": 9,  "mrr": 0.275518, "median_rank": 30},
+    "improved": 3, "regressed": 12, "unchanged": 4,
+    "decision": "rejected",
+    "source": "JimmyK300/official-dataset-control (private history)@13fadfa3f44700b489179eb9040d00439ac76a05:evaluation/queries/benchmark/semantic-index-bm25-atomic-rrf-v1/README.md"
+  }
+}
